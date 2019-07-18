@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SvgService } from '@demo/core-data';
 
 @Component({
   selector: 'demo-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'landing-page';
+
+  constructor(private implementSvgService: SvgService) {
+    this.implementSvgService.all_Icons();
+  }
 }
