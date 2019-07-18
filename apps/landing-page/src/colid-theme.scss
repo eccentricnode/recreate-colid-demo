@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$colid-app-primary: mat-palette($mat-light-blue, 500);
+$colid-app-accent: mat-palette($mat-blue, A200);
+
+$colid-app-theme: mat-light-theme($colid-app-primary, $colid-app-accent);
+
+@include angular-material-theme($colid-app-theme);
