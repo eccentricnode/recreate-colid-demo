@@ -90,9 +90,7 @@
             "polyfills": "apps/landing-page/src/polyfills.ts",
             "tsConfig": "apps/landing-page/tsconfig.spec.json",
             "karmaConfig": "apps/landing-page/karma.conf.js",
-            "styles": [
-              "apps/landing-page/src/styles.scss"
-            ],
+            "styles": ["apps/landing-page/src/styles.scss"],
             "scripts": [],
             "assets": [
               "apps/landing-page/src/favicon.ico",
@@ -107,9 +105,7 @@
               "apps/landing-page/tsconfig.app.json",
               "apps/landing-page/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -120,7 +116,7 @@
       "prefix": "",
       "architect": {
         "e2e": {
-          "builder": "@nrwl/builders:cypress",
+          "builder": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/landing-page-e2e/cypress.json",
             "tsConfig": "apps/landing-page-e2e/tsconfig.e2e.json",
@@ -136,9 +132,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/landing-page-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -164,9 +158,7 @@
               "libs/core-data/tsconfig.lib.json",
               "libs/core-data/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       },
@@ -197,9 +189,7 @@
               "libs/material/tsconfig.lib.json",
               "libs/material/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       },
@@ -215,15 +205,22 @@
       "typescriptMismatch": false,
       "versionMismatch": false
     },
-    "defaultCollection": "@nrwl/schematics",
+    "defaultCollection": "@nrwl/angular",
     "packageManager": "npm"
   },
   "schematics": {
     "@nrwl/schematics:application": {
-      "style": "scss"
+      "style": "scss",
+      "unitTestRunner": "karma",
+      "e2eTestRunner": "protractor"
     },
     "@nrwl/schematics:library": {
-      "style": "scss"
+      "style": "scss",
+      "unitTestRunner": "karma",
+      "framework": "angular"
+    },
+    "@nrwl/schematics:node-application": {
+      "framework": "express"
     }
   },
   "defaultProject": "landing-page"
