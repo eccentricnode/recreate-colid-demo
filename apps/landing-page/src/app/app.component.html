@@ -1,6 +1,6 @@
-<mat-toolbar>
+<mat-toolbar color="primary">
   <span class="title">
-    <h1>{{title}}</h1>
+    <h1>{{ title }}</h1>
   </span>
 
   <div class="page-links">
@@ -22,13 +22,57 @@
 <footer>
   <div id="absolute-footer">
     <div class="footer-top">
-
+      <h1>Contact Us</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+        voluptates, temporibus at, facere harum fugiat!
+      </p>
+      <div class="contact-box">
+        <div class="contact-specific-info">
+          <div class="side-icon-box">
+            <img src="" />
+            <div class="contact-medium-details">
+              <h3>Address:</h3>
+              <p>
+                Box 564, Disneyland
+                <br />
+                USA
+              </p>
+            </div>
+          </div>
+          <div class="side-icon-box">
+            <img src="" />
+            <div class="contact-medium-details">
+              <h3>Telephone:</h3>
+              <p>
+                +8801812726495
+                <br />
+                +8801687420471
+              </p>
+            </div>
+          </div>
+          <div class="side-icon-box">
+            <img src="" />
+            <div class="contact-medium-details">
+              <h3>E-mail:</h3>
+              <p>youremail@example.com <br />example@mail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form [formGroup]="form" #formDir="ngForm" (submit)="submit()">
+            <mat-form-field appearance="outline">
+              <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline"> </mat-form-field>
+            <mat-form-field appearance="outline"> </mat-form-field>
+            <mat-form-field appearance="outline"> </mat-form-field>
+          </form>
+          <button mat-raised-button color="accent">Submit</button>
+        </div>
+      </div>
     </div>
-    <div class="footer-middle">
-
-    </div>
-    <div class="footer-bottom">
-      
-    </div>
+    <div class="footer-middle"></div>
+    <div class="footer-bottom"></div>
   </div>
 </footer>

@@ -1,9 +1,56 @@
+mat-toolbar{
+    display: flex;
+    justify-content: space-around;
 
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 13px;
+            padding-right: 30px;
+             margin: 0;
+        }
 
-#footer {
+        a:hover {
+            color: #708090;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    color: #fff;
     background: linear-gradient(to bottom,#75cbe7 0%,#138fc2 100%);
     
     #absolute-footer {
         background-image: url('/assets/images/asset4-.webp');
+    }
+    
+    .contact-box {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .contact-specific-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .side-icon-box {
+            // display: flex;
+            // justify-content: space-evenly;
+
+            .contact-medium-details {
+                text-align: left;
+
+                h3 {
+                    margin: 0px 0px 10px;
+                }
+            }
+        }
     }
 }
