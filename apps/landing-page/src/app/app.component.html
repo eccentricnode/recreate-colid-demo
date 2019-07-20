@@ -22,53 +22,75 @@
 <footer>
   <div id="absolute-footer">
     <div class="footer-top">
-      <h1>Contact Us</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
-        voluptates, temporibus at, facere harum fugiat!
-      </p>
-      <div class="contact-box">
-        <div class="contact-specific-info">
-          <div class="side-icon-box">
-            <img src="" />
-            <div class="contact-medium-details">
-              <h3>Address:</h3>
-              <p>
-                Box 564, Disneyland
-                <br />
-                USA
-              </p>
-            </div>
-          </div>
-          <div class="side-icon-box">
-            <img src="" />
-            <div class="contact-medium-details">
-              <h3>Telephone:</h3>
-              <p>
-                +8801812726495
-                <br />
-                +8801687420471
-              </p>
-            </div>
-          </div>
-          <div class="side-icon-box">
-            <img src="" />
-            <div class="contact-medium-details">
-              <h3>E-mail:</h3>
-              <p>youremail@example.com <br />example@mail.com</p>
-            </div>
-          </div>
+      <div class="container">
+        <div class="row text">
+          <h1>Contact Us</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
+            voluptates, temporibus at, facere harum fugiat!
+          </p>
         </div>
-        <div class="contact-form">
-          <form [formGroup]="form" #formDir="ngForm" (submit)="submit()">
-            <mat-form-field appearance="outline">
-              <input matInput>
-            </mat-form-field>
-            <mat-form-field appearance="outline"> </mat-form-field>
-            <mat-form-field appearance="outline"> </mat-form-field>
-            <mat-form-field appearance="outline"> </mat-form-field>
-          </form>
-          <button mat-raised-button color="accent">Submit</button>
+        <div class="row box">
+          <div class="contact-specific-info">
+            <div class="side-icon-box">
+              <img src="" />
+              <div class="contact-medium-details">
+                <h3>Address:</h3>
+                <p>
+                  Box 564, Disneyland
+                  <br />
+                  USA
+                </p>
+              </div>
+            </div>
+            <div class="side-icon-box">
+              <img src="" />
+              <div class="contact-medium-details">
+                <h3>Telephone:</h3>
+                <p>
+                  +8801812726495
+                  <br />
+                  +8801687420471
+                </p>
+              </div>
+            </div>
+            <div class="side-icon-box">
+              <img src="" />
+              <div class="contact-medium-details">
+                <h3>E-mail:</h3>
+                <p>youremail@example.com <br />example@mail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form [formGroup]="form" #formDir="ngForm" (submit)="submit()">
+              <div class="form-double">
+                <mat-form-field appearance="outline">
+                  <mat-label>Your Name</mat-label>
+                  <input matInput />
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                  <mat-label>Email Address</mat-label>
+                  <input matInput />
+                </mat-form-field>
+              </div>
+              <mat-form-field appearance="outline">
+                <mat-label>Message Topic</mat-label>
+                <input matInput />
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Message</mat-label>
+                <textarea
+                  matInput
+                  cdkTextareaAutosize
+                  #autosize="cdkTextareaAutosize"
+                  cdkAutosizeMinRows="1"
+                  cdkAutosizeMaxRows="5"
+                ></textarea>
+              </mat-form-field>
+            </form>
+            <button mat-raised-button color="accent">Submit</button>
+          </div>
         </div>
       </div>
     </div>

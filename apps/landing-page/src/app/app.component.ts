@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone, ViewChild } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { SvgService } from '@demo/core-data';
-
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'demo-root',
@@ -12,15 +13,23 @@ export class AppComponent implements OnInit {
   form: FormGroup;
   title = 'Landing Page';
 
+  @ViewChild('autosize', {static: false}) autosize: CdkTextareaAutosize;
+
   constructor(
     private formBuilder: FormBuilder,
     private implementSvgService: SvgService,
+    private _ngZone: NgZone,
     ) {
     this.implementSvgService.all_Icons();
   }
 
   ngOnInit() {
     this.contactForm();
+  }
+
+  triggerResize() {
+    this._ngZone.onStable.pipe(take(1))
+        .subscribe(() => this.autosize.resizeToFitContent(true));
   }
 
   submit() {
