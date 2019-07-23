@@ -11,13 +11,14 @@ export class SvgService {
     private domSanitizer: DomSanitizer
   ) {}
 
-  all_Icons() {
+  social_Icons() {
     this.facebook_Icon();
     this.twitter_Icon();
     this.googlePlus_Icon();
     this.linkedIn_Icon();
     this.github_Icon();
   }
+
 
   facebook_Icon() {
     this.matIconRegistry.addSvgIcon(
@@ -53,4 +54,6 @@ export class SvgService {
       this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/github-alt-brands.svg")
     );
   }
+
+
 }

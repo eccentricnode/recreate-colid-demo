@@ -23,81 +23,82 @@ mat-toolbar {
 
 footer {
   color: #fff;
+  padding-top: 120px;
   background: linear-gradient(to bottom, #75cbe7 0%, #138fc2 100%);
+  // display: relative;
 
-  #absolute-footer {
-    background-image: url('/assets/images/asset4-.webp');
+  .footer-bg {
+    // background: url('/assets/images/asset4-.webp') no-repeat scroll center
+    //   bottom/100% auto;
+    z-index: 1;
+  }
 
-    .footer-top {
-        margin-bottom: 150px;
+  .footer-top {
+    margin-bottom: 150px;
 
-      .container {
-        flex-direction: column;
-        justify-content: center;
+    .container {
+      flex-direction: column;
+      justify-content: center;
 
-        .text {
-          text-align: center;
-        }
+      .text {
+        text-align: center;
+      }
 
-        .box {
+      .box {
+        justify-content: space-around;
+
+        .contact-specific-info {
+          flex-direction: column;
           justify-content: space-around;
 
-          .contact-specific-info {
-            flex-direction: column;
-            justify-content: space-around;
+          .side-icon-box {
+            text-align: left;
 
-            .side-icon-box {
-              text-align: left;
-
-              .contact-medium-details {
-                h3 {
-                  margin: 0px 0px 10px;
-                }
+            .contact-medium-details {
+              h3 {
+                margin: 0px 0px 10px;
               }
             }
           }
+        }
 
-          .contact-form {
+        .contact-form {
+          flex-direction: column;
+          justify-content: center;
+
+          .input-textarea {
             flex-direction: column;
-            justify-content: center;
-
-            .input-textarea {
-              flex-direction: column;
-            }
-
-            button {
-              width: 140px;
-              height: 43px;
-              font-size: 18px;
-            }
           }
         }
       }
     }
+  }
 
-    .footer-middle {
-        margin-bottom: 60px;
-        // flex-wrap: wrap;
+  .footer-middle {
+    margin-bottom: 60px;
+    // flex-wrap: wrap;
 
-        .middle-footer-text {
-            justify-content: center;
-        }
-
-        .social-icons {
-            justify-content: center;;
-
-            .icons {
-                justify-content: center;
-                list-style: none;
-                li {
-                    margin: 0 3px;
-                }
-            }
-        }
+    .middle-footer-text {
+      justify-content: center;
     }
 
-    .footer-bottom {
+    .social-icons {
+      justify-content: center;
 
+      .icons {
+        justify-content: center;
+        list-style: none;
+        li {
+          margin: 0 3px;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    p {
+      margin: 0;
+      padding-bottom: 20px;
     }
   }
 }
