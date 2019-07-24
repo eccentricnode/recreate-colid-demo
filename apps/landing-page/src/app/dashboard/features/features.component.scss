@@ -1,3 +1,22 @@
-.overlay {
+.container {
+    padding: 120px 0px;
+}
+
+.align {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.features-text {
+    text-align: center;
+    align-items: center;
+}
+
+.justify {
+    justify-content: center;
+}
+
+.box-icon {
+    padding: 50px 30px;
     
 }
