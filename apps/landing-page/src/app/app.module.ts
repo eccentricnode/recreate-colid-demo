@@ -16,7 +16,6 @@ import { FeaturesComponent } from './dashboard/features/features.component';
 import { PricingComponent } from './dashboard/pricing/pricing.component';
 import { TeamComponent } from './dashboard/team/team.component';
 import { BlogComponent } from './dashboard/blog/blog.component';
-import { ContactComponent } from './dashboard/contact/contact.component';
 import { FaqComponent } from './dashboard/faq/faq.component';
 
 @NgModule({
@@ -29,7 +28,6 @@ import { FaqComponent } from './dashboard/faq/faq.component';
     PricingComponent,
     TeamComponent,
     BlogComponent,
-    ContactComponent,
     FaqComponent
   ],
   imports: [
